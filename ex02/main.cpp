@@ -5,7 +5,7 @@
 
 int main()
 {
-    std::srand(time(NULL));
+    std::srand(std::time(NULL));
 
     std::cout << "----- SHRUBBERY TEST -----" << std::endl << std::endl;
     {
