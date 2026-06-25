@@ -49,7 +49,7 @@ class AForm
         void execute(Bureaucrat const & executor) const;
 
     protected:
-        virtual void executeForm() const = 0;
+        virtual void executeAction() const = 0;
 };
 
 std::ostream &operator<<(std::ostream &os, const AForm &f);

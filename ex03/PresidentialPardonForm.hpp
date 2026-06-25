@@ -12,7 +12,7 @@ class PresidentialPardonForm : public AForm
         PresidentialPardonForm(const PresidentialPardonForm &other);
         PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
 
-        virtual void executeForm() const;
+        virtual void executeAction() const;
 };
 
 #endif

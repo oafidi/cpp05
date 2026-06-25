@@ -41,8 +41,9 @@ AForm::AForm(const AForm &other)
 
 AForm& AForm::operator=(AForm const &other)
 {
-	std::cout << "AForm copy assignment operator called" << std::endl;
-	this->is_signed = other.is_signed;
+    if (this != &other)
+        this->is_signed = other.is_signed;
+    std::cout << "AForm copy assignment operator called" << std::endl;
 	return (*this);
 }
 
@@ -97,19 +98,18 @@ void AForm::beSigned(Bureaucrat const& bureaucrat)
 std::ostream &operator<<(std::ostream &os, const AForm &f)
 {
     os << f.getName()
-       << ", target: "
-       << f.getTarget()
+       << ", target: " << f.getTarget()
        << ", signed: " << (f.getIsSigned() ? "true" : "false")
        << ", grade_to_sign: " << f.getGradeToSign()
        << ", grade_to_execute: " << f.getGradeToExecute();
     return os;
 }
 
-void AForm::execute(const Bureaucrat & executor) const
+void AForm::execute(Bureaucrat const & executor) const
 {
     if (!this->is_signed)
         throw FormNotSignedException();
     if (executor.getGrade() > this->grade_to_execute)
         throw GradeTooLowException();
-    executeForm();
+    executeAction();
 }

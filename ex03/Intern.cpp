@@ -45,7 +45,7 @@ AForm *Intern::makePresidential(const std::string& target)
 
 AForm *Intern::makeForm(const std::string &name, const std::string &target)
 {
-    std::string types[3] = {"PresidentialPardonForm", "RobotomyRequestForm", "ShrubberyCreationForm"};
+    std::string types[3] = {"presidential pardon", "robotomy request", "shrubbery creation"};
     AForm *(Intern::*forms[3])(const std::string&) = {
         &Intern::makePresidential,
         &Intern::makeRobotomy,

@@ -22,6 +22,7 @@ RobotomyRequestForm &	RobotomyRequestForm::operator=(RobotomyRequestForm const &
 {
 	if (this != &other)
 		AForm::operator=(other);
+	std::cout << "Robotomy copy assignment operator called" << std::endl;
 	return (*this);
 }
 
@@ -30,12 +31,12 @@ RobotomyRequestForm::~RobotomyRequestForm()
 	std::cout << "Robotomy destructor called" << std::endl;
 }
 
-void RobotomyRequestForm::executeForm() const
+void RobotomyRequestForm::executeAction() const
 {
     std::cout << "Traq Traq Traq ....." << std::endl;
 
     if (rand() % 2)
         std::cout << this->getTarget() << " has been robotomized successfully 50% of the time." << std::endl;
     else
-        throw std::runtime_error("The robotomy failed");
+		std::cout << "the robotomy failed!" << std::endl;
 }

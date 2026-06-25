@@ -22,6 +22,7 @@ PresidentialPardonForm &	PresidentialPardonForm::operator=(PresidentialPardonFor
 {
 	if (this != &other)
 		AForm::operator=(other);
+	std::cout << "Presidential copy assignment operator called" << std::endl;
 	return (*this);
 }
 
@@ -30,7 +31,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 	std::cout << "Presidential destructor called" << std::endl;
 }
 
-void PresidentialPardonForm::executeForm() const
+void PresidentialPardonForm::executeAction() const
 {
     std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

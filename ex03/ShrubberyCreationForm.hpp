@@ -13,7 +13,7 @@ class ShrubberyCreationForm : public AForm
         ShrubberyCreationForm(const ShrubberyCreationForm &other);
         ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
 
-        virtual void executeForm() const;
+        virtual void executeAction() const;
 };
 
 #endif

@@ -22,6 +22,7 @@ ShrubberyCreationForm &	ShrubberyCreationForm::operator=(ShrubberyCreationForm c
 {
 	if (this != &other)
 		AForm::operator=(other);
+    std::cout << "Shrubbery copy assignment operator called" << std::endl;
 	return (*this);
 }
 
@@ -30,7 +31,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	std::cout << "Shrubbery destructor called" << std::endl;
 }
 
-void ShrubberyCreationForm::executeForm() const
+void ShrubberyCreationForm::executeAction() const
 {
     std::string filename = this->getTarget() + "_shrubbery";
     std::ofstream filestream(filename.c_str());

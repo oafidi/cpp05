@@ -4,7 +4,7 @@
 int main()
 {
 
-    std::cout << "--- Test Form creation  ---" << std::endl;
+    std::cout << "\n--- Test Form creation  ---" << std::endl;
     try
     {
         Form f("F1", 50, 25);
@@ -15,7 +15,7 @@ int main()
         std::cout << "Exception: " << e.what() << std::endl;
     }
 
-    std::cout << "--- Test Form grade too high ---" << std::endl;
+    std::cout << "\n--- Test Form grade too high ---" << std::endl;
     try
     {
         Form f("F2", 0, 25);
@@ -26,7 +26,7 @@ int main()
         std::cout << "Exception: " << e.what() << std::endl;
     }
 
-    std::cout << "--- Test Form grade too low ---" << std::endl;
+    std::cout << "\n--- Test Form grade too low ---" << std::endl;
     try
     {
         Form f("F3", 50, 151);
@@ -37,7 +37,7 @@ int main()
         std::cout << "Exception: " << e.what() << std::endl;
     }
 
-    std::cout << "--- Test signing ---" << std::endl;
+    std::cout << "\n--- Test signing ---" << std::endl;
     try
     {
         Bureaucrat b("Omar", 30);
@@ -51,7 +51,7 @@ int main()
         std::cout << "Exception: " << e.what() << std::endl;
     }
 
-    std::cout << "--- Test bad signing ---" << std::endl;
+    std::cout << "\n--- Test bad signing ---" << std::endl;
     try
     {
         Bureaucrat b("Samir", 100);

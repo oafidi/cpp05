@@ -13,7 +13,7 @@ int main()
     try
     {
         Bureaucrat boss("Boss", 1);
-        AForm* shrubbery = intern.makeForm("ShrubberyCreationForm", "home");
+        AForm* shrubbery = intern.makeForm("shrubbery creation", "home");
         boss.signForm(*shrubbery);
         boss.executeForm(*shrubbery);
         delete shrubbery;
@@ -27,7 +27,7 @@ int main()
     try
     {
         Bureaucrat boss("Boss", 1);
-        AForm* shrubbery = intern.makeForm("RobotomyRequestForm", "home");
+        AForm* shrubbery = intern.makeForm("robotomy request", "home");
         boss.signForm(*shrubbery);
         boss.executeForm(*shrubbery);
         delete shrubbery;
@@ -41,7 +41,7 @@ int main()
     try
     {
         Bureaucrat boss("Boss", 1);
-        AForm* shrubbery = intern.makeForm("PresidentialPardonForm", "home");
+        AForm* shrubbery = intern.makeForm("presidential pardon", "home");
         boss.signForm(*shrubbery);
         boss.executeForm(*shrubbery);
         delete shrubbery;

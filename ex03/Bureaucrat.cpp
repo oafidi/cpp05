@@ -8,27 +8,29 @@ Bureaucrat::Bureaucrat() : name("Default"), grade(150)
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name), grade(grade)
 {
-    if (grade < 1) throw GradeTooHighException();
-    else if (grade > 150) throw GradeTooLowException();
-
-    std::cout << "Bureaucrat " << name <<  " with grade " << grade << " created" << std::endl;
+    if (grade < 1)
+        throw GradeTooHighException();
+    if (grade > 150)
+        throw GradeTooLowException();
+    std::cout << "Bureaucrat parametrized constructor called" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat " << name << " destructor called" << std::endl;
+    std::cout << "Bureaucrat destructor called" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const &other) : name(other.name), grade(other.grade)
 {
-    std::cout << "Bureaucrat " << name << " copy constructor called" << std::endl;
+    std::cout << "Bureaucrat copy constructor called" << std::endl;
 }
+
 
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const &other)
 {
-    this->grade = other.grade;
+    if (this != &other)
+        this->grade = other.grade;
     std::cout << "Bureaucrat copy assignement operator called" << std::endl;
-
     return *this;
 }
 
@@ -94,6 +96,6 @@ void Bureaucrat::executeForm(AForm const & form) const
     }
     catch (std::exception &e)
     {
-        std::cout << *this << " can't executed " << form << " because " << e.what() << std::endl;
+        std::cout << *this << " couldn't execute " << form << " because " << e.what() << std::endl;
     }
 }
