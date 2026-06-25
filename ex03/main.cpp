@@ -27,10 +27,10 @@ int main()
     try
     {
         Bureaucrat boss("Boss", 1);
-        AForm* shrubbery = intern.makeForm("robotomy request", "home");
-        boss.signForm(*shrubbery);
-        boss.executeForm(*shrubbery);
-        delete shrubbery;
+        AForm* robotomy = intern.makeForm("robotomy request", "home");
+        boss.signForm(*robotomy);
+        boss.executeForm(*robotomy);
+        delete robotomy;
     }
     catch (std::exception &e)
     {
@@ -41,10 +41,10 @@ int main()
     try
     {
         Bureaucrat boss("Boss", 1);
-        AForm* shrubbery = intern.makeForm("presidential pardon", "home");
-        boss.signForm(*shrubbery);
-        boss.executeForm(*shrubbery);
-        delete shrubbery;
+        AForm* pardon = intern.makeForm("presidential pardon", "home");
+        boss.signForm(*pardon);
+        boss.executeForm(*pardon);
+        delete pardon;
     }
     catch (std::exception &e)
     {
@@ -55,10 +55,10 @@ int main()
     try
     {
         Bureaucrat boss("Boss", 1);
-        AForm* shrubbery = intern.makeForm("Invalid", "home");
-        boss.signForm(*shrubbery);
-        boss.executeForm(*shrubbery);
-        delete shrubbery;
+        AForm* invalid = intern.makeForm("Invalid", "home");
+        boss.signForm(*invalid);
+        boss.executeForm(*invalid);
+        delete invalid;
     }
     catch (std::exception &e)
     {
